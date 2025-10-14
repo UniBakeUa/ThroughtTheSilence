@@ -600,7 +600,7 @@ GameObject:
   - component: {fileID: 1484465220}
   - component: {fileID: 1484465219}
   - component: {fileID: 1484465218}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -709,11 +709,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1671751578}
   - component: {fileID: 1671751579}
+  - component: {fileID: 1671751584}
   - component: {fileID: 1671751581}
   - component: {fileID: 1671751580}
   - component: {fileID: 1671751582}
   - component: {fileID: 1671751583}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -763,7 +764,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!114 &1671751580
 MonoBehaviour:
@@ -779,6 +780,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Player.Move
   walkSpeed: 5
   sprintSpeed: 8
+  crouchHeight: 0.5
+  crouchSpeed: 3
+  whatIsSolid:
+    serializedVersion: 2
+    m_Bits: 9
 --- !u!114 &1671751581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -823,6 +829,29 @@ MonoBehaviour:
   playerCamera: {fileID: 330585545}
   sensitivity: 30
   verticalLimit: 90
+--- !u!136 &1671751584
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671751577}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1858571951
 GameObject:
   m_ObjectHideFlags: 0
@@ -866,37 +895,13 @@ GameObject:
   - component: {fileID: 2080010532}
   - component: {fileID: 2080010531}
   - component: {fileID: 2080010530}
-  - component: {fileID: 2080010529}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!136 &2080010529
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2080010528}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2080010530
 MeshRenderer:
   m_ObjectHideFlags: 0

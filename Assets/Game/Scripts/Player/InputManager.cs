@@ -34,6 +34,10 @@ namespace Player
                 gameplay.Sprint.performed += ctx => _move.SetSprint(true);
                 gameplay.Sprint.canceled += ctx => _move.SetSprint(false);
                 
+                //Crouch
+                gameplay.Crouch.performed += OnCrouch;
+                gameplay.Crouch.canceled += OnStand;
+                
                 // Camera
                 gameplay.Look.performed += OnLookChanged;
                 gameplay.Look.canceled += OnLookChanged;
@@ -51,16 +55,23 @@ namespace Player
             {
                 var gameplay = _controls.gameInput.GamePlay;
 
+                // Move
                 gameplay.Move.performed -= OnMoveChanged;
                 gameplay.Move.canceled -= OnMoveChanged;
 
+                // Sprint
                 gameplay.Sprint.performed -= ctx => _move.SetSprint(true);
                 gameplay.Sprint.canceled -= ctx => _move.SetSprint(false);
                 
+                //Crouch
+                gameplay.Crouch.performed -= OnCrouch;
+                gameplay.Crouch.canceled -= OnStand;
                 
+                // Camera
                 gameplay.Look.performed -= OnLookChanged;
-                gameplay.Look.canceled -= OnLookChanged;
+                gameplay.Look.canceled -= OnLookChanged; 
 
+                // Jump
                 gameplay.Jump.performed -= OnJump;
             }
 
@@ -72,5 +83,10 @@ namespace Player
 
             private void OnJump(InputAction.CallbackContext ctx)
                 => _jump.TryToJump();
+            
+            private void OnCrouch(InputAction.CallbackContext ctx)
+                => _move.ToCrouch();
+            private void OnStand(InputAction.CallbackContext ctx)
+                => _move.ToStand();
     }
 }
