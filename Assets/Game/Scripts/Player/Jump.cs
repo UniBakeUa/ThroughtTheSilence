@@ -6,6 +6,7 @@ namespace Player
     {
         [SerializeField] private float jumpForce;
         [SerializeField] private float groundCheckDistance;
+        [SerializeField] private Transform footPos;
         [SerializeField] private LayerMask groundMask;
 
         private Rigidbody _rigidbbody;
@@ -25,7 +26,7 @@ namespace Player
 
         private bool IsGrounded()
         {
-            return Physics.Raycast(transform.position, Vector3.down, groundCheckDistance, groundMask);
+            return Physics.Raycast(footPos.position, Vector3.down, groundCheckDistance, groundMask);
         }
     }
 }
