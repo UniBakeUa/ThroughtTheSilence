@@ -10,5 +10,9 @@ namespace RedstoneinventeGameStudio
 
         public string itemTooltip;
         public Sprite itemIcon;
+        public int maxStackSize;
+        public int currentStackSize;
+        public float weightPerUnit;
+       
     }
 }

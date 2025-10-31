@@ -5,10 +5,10 @@ namespace RedstoneinventeGameStudio
 {
     public class ItemDraggingManager : MonoBehaviour
     {
-        public static CardManager dragCard;
+        public static SlotManager dragCard;
 
-        public static CardManager fromCard;
-        public static CardManager toCard;
+        public static SlotManager fromCard;
+        public static SlotManager toCard;
 
         [SerializeField] Vector3 tooltipOffset;
         [SerializeField] Vector3 draggingCardOffset;
