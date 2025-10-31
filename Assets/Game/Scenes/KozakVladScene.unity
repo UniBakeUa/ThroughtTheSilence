@@ -591,6 +591,7 @@ GameObject:
   - component: {fileID: 1138856257}
   - component: {fileID: 1138856256}
   - component: {fileID: 1138856255}
+  - component: {fileID: 1138856259}
   m_Layer: 0
   m_Name: crate
   m_TagString: Untagged
@@ -687,6 +688,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1138856259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138856254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 940076f86b944ef59da73f693017e3b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightMaterial: {fileID: 2100000, guid: b6d1a8fe61ce03f4382d976ee18bd00b, type: 2}
 --- !u!1 &1142907508
 GameObject:
   m_ObjectHideFlags: 0
@@ -780,6 +794,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inventory
       objectReference: {fileID: 0}
+    - target: {fileID: 5822868608655354071, guid: 5f15da34ab102ba42bb1aa2706f4261f, type: 3}
+      propertyPath: inventoryAction
+      value: 
+      objectReference: {fileID: -5678944450337052342, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     - target: {fileID: 8025898595759486383, guid: 5f15da34ab102ba42bb1aa2706f4261f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -960

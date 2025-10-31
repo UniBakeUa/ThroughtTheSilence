@@ -79,21 +79,18 @@
                     "initialStateCheck": false
                 },
                 {
-<<<<<<< HEAD
-                    "name": "Inventory",
-                    "type": "Button",
-                    "id": "7632bae7-dc1b-4feb-92b1-b8f95a000da8",
-=======
-<<<<<<< HEAD
                     "name": "Interact",
                     "type": "Button",
                     "id": "52640330-e589-4a2b-aa63-a084c30da6da",
-=======
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Inventory",
                     "type": "Button",
-                    "id": "7632bae7-dc1b-4feb-92b1-b8f95a000da8",
->>>>>>> InventorySystem
->>>>>>> main
+                    "id": "3e45253d-6e46-42a2-ab8c-9419f796c8ed",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -466,8 +463,6 @@
                 },
                 {
                     "name": "",
-<<<<<<< HEAD
-=======
                     "id": "906173e1-f9cb-4069-a50d-12908ee2bdb7",
                     "path": "<Keyboard>/e",
                     "interactions": "",
@@ -479,12 +474,11 @@
                 },
                 {
                     "name": "",
->>>>>>> main
-                    "id": "1df284e8-415e-4140-93cd-4459f8cc4321",
+                    "id": "f6ded294-8907-4d38-a843-745ab1f54b56",
                     "path": "<Keyboard>/i",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard&Mouse",
+                    "groups": ";Keyboard&Mouse",
                     "action": "Inventory",
                     "isComposite": false,
                     "isPartOfComposite": false
