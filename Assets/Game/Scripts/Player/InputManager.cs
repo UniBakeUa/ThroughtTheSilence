@@ -11,6 +11,7 @@ namespace Player
             private Move _move;
             private PlayerLook _look;
             private Jump _jump;
+            private Interacter _interacter;
 
             private void Start()
             {
@@ -18,6 +19,7 @@ namespace Player
                 _move = GetComponent<Move>();
                 _look = GetComponent<PlayerLook>();
                 _jump = GetComponent<Jump>();
+                _interacter = GetComponent<Interacter>();
 
                 SetInputs();
             }
@@ -44,6 +46,9 @@ namespace Player
 
                 // Jump
                 gameplay.Jump.performed += OnJump;
+                
+                //Interact
+                gameplay.Interact.performed += OnInteract;
             }
 
             private void OnDestroy()
@@ -73,6 +78,9 @@ namespace Player
 
                 // Jump
                 gameplay.Jump.performed -= OnJump;
+                
+                //Interact
+                gameplay.Interact.performed -= OnInteract;
             }
 
             private void OnMoveChanged(InputAction.CallbackContext ctx)
@@ -88,5 +96,8 @@ namespace Player
                 => _move.ToCrouch();
             private void OnStand(InputAction.CallbackContext ctx)
                 => _move.ToStand();
+            
+            private void OnInteract(InputAction.CallbackContext ctx)
+                => _interacter.TryToInteract(); 
     }
 }
